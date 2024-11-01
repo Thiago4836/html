@@ -1,0 +1,236 @@
+/* Estilos actualizados para el modal de inicio de sesión */
+.login-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.login-content {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 400px; /* Hacer el formulario más ancho */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.login-content h2 {
+    font-size: 2em; /* Tamaño de fuente más grande para el título */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-content label {
+    font-size: 1.2em; /* Tamaño de fuente más grande para las etiquetas */
+    font-weight: bold;
+    color: #333;
+}
+
+.login-content input {
+    width: 100%;
+    padding: 12px; /* Agrandar los campos de entrada */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.1em; /* Tamaño de fuente mayor para los campos de texto */
+}
+
+.login-content button {
+    width: 100%;
+    padding: 12px; /* Botón más grande */
+    background-color: #1a1f36;
+    color: white;
+    font-size: 1.2em; /* Tamaño de fuente más grande para el botón */
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-content button:hover {
+    background-color: #333;
+}
+
+#error-message {
+    color: red;
+    margin-top: 15px;
+    font-size: 1em;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1f36; /* Fondo oscuro */
+    color: #f0f0f0;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #f0c674; /* Color amarillo claro para el título */
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 14px 16px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #f0c674;
+    color: #000;
+}
+
+/* Menú desplegable */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0c674;
+    color: #000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav ul::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Sección de contenido */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content h2 {
+    font-size: 2em;
+    color: #f0c674;
+}
+
+.content h3 {
+    font-size: 1.5em;
+    color: #f0c674;
+}
+
+.content p, .content ul {
+    color: #f0f0f0;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.content img {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* Estilos del botón de "Volver al inicio" */
+#btnScrollTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #f0c674;
+    color: #000;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+#btnScrollTop:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    color: #f0c674;
+    font-size: 0.9em;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.5);
+}
+.qr-image {
+    max-width: 100%; /* La imagen no superará el ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+}
